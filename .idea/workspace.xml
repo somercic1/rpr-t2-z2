@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="964bb403-8edd-4fc5-9287-9b0f30f29bc8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpr-t2-z2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rpr-t2-z2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal02/Interval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/tutorijal02/Interval.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,22 +65,30 @@
       <option name="project" value="LOCAL" />
       <updated>1604533580195</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Potrebno jos preklopiti metode toString i Equals.">
+      <created>1604670764596</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604670764597</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testni commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="testni commit" />
+    <MESSAGE value="Potrebno jos preklopiti metode toString i Equals." />
+    <option name="LAST_COMMIT_MESSAGE" value="Potrebno jos preklopiti metode toString i Equals." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1604664814715">
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1604671403343">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1604664814715" />
-    <state x="395" y="0" key="CommitChangelistDialog2" timestamp="1604533578989">
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1604671403343" />
+    <state x="395" y="0" key="CommitChangelistDialog2" timestamp="1604670762590">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="395" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1604533578989" />
+    <state x="395" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1604670762590" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1604533664021">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

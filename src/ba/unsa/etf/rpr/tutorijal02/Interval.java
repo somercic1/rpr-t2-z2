@@ -114,4 +114,26 @@ public class Interval {
         }
     }
 
+    @Override
+    public String toString() {
+        if(getPripadaPocetna()==true && getPripadaKrajnja()==false)
+            return "[" + pocetna + "," + krajnja + ")";
+        else if(getPripadaPocetna()==true && getPripadaKrajnja()==true)
+            return "[" + pocetna + "," + krajnja + "]";
+        else if (getPripadaPocetna()==false && getPripadaKrajnja()==true)
+            return "("+pocetna + "," + krajnja+"]";
+        else
+            return "(" + pocetna + "," + krajnja+")";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(!(obj instanceof Interval))
+            return false;
+
+        if(this.getPocetna()==((Interval) obj).getPocetna() && this.getKrajnja()==((Interval) obj).getKrajnja() && this.getPripadaPocetna()==((Interval) obj).getPripadaPocetna() && this.getPripadaKrajnja()==((Interval) obj).getPripadaKrajnja())
+            return true;
+        else
+            return false;
+    }
 }
