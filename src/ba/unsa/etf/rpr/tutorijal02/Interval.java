@@ -116,6 +116,9 @@ public class Interval {
 
     @Override
     public String toString() {
+        if(getPocetna()==0 && getKrajnja()==0)
+            return "()";
+
         if(getPripadaPocetna()==true && getPripadaKrajnja()==false)
             return "[" + pocetna + "," + krajnja + ")";
         else if(getPripadaPocetna()==true && getPripadaKrajnja()==true)
