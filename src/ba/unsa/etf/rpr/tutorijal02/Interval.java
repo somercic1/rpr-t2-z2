@@ -55,40 +55,32 @@ public class Interval {
 
 
     public boolean isIn(double v) {
-        if(v>=this.pocetna && v<this.krajnja)
-            return true;
-        else
-            return false;
+
+        return v>=this.pocetna && v<this.krajnja;
     }
 
     public boolean isNull() {
-        if(this.pocetna==0.0 && this.krajnja==0.0 && this.pripadaPocetna==false && this.pripadaKrajnja==false)
-            return true;
-        else
-            return false;
+        return this.pocetna==0.0 && this.krajnja==0.0 && !this.pripadaPocetna && !this.pripadaKrajnja;
     }
 
     public Interval intersect(Interval interval) {
-       /* Interval nula=new Interval();
-        Interval presjekNula=intersect(interval, nula); */
 
         return intersect(this,interval);
     }
     public static Interval intersect(Interval i, Interval i2) {
         if(i.getKrajnja() < i2.getPocetna()){
-            Interval nula= new Interval();
-            return nula;
+            return new Interval();
         }
 
         else {
             Interval presjek = new Interval();
-            if (i.getPocetna() < i2.getPocetna() && i2.getPripadaPocetna() == true) {
+            if (i.getPocetna() < i2.getPocetna() && i2.getPripadaPocetna()) {
                 presjek.setPocetna(i2.getPocetna());
                 presjek.setPripadaPocetna(true);
-            } else if (i.getPocetna() > i2.getPocetna() && i.getPripadaPocetna() == true) {
+            } else if (i.getPocetna() > i2.getPocetna() && i.getPripadaPocetna()) {
                 presjek.setPocetna(i.getPocetna());
                 presjek.setPripadaPocetna(true);
-            } else if (i.getPocetna() > i2.getPocetna() && i.getPripadaPocetna() == false) {
+            } else if (i.getPocetna() > i2.getPocetna() && !i.getPripadaPocetna()) {
                 presjek.setPocetna(i.getPocetna());
                 presjek.setPripadaPocetna(false);
             } else {
@@ -96,13 +88,13 @@ public class Interval {
                 presjek.setPripadaPocetna(false);
             }
 
-            if (i.getKrajnja() < i2.getPocetna() && i.getPripadaKrajnja() == true) {
+            if (i.getKrajnja() < i2.getPocetna() && i.getPripadaKrajnja()) {
                 presjek.setKrajnja(i.getKrajnja());
                 presjek.setPripadaKrajnja(true);
-            } else if (i.getKrajnja() > i2.getKrajnja() && i2.getPripadaKrajnja() == true) {
+            } else if (i.getKrajnja() > i2.getKrajnja() && i2.getPripadaKrajnja()) {
                 presjek.setKrajnja(i2.getKrajnja());
                 presjek.setPripadaKrajnja(true);
-            } else if (i.getPocetna() > i2.getPocetna() && i2.getPripadaPocetna() == false) {
+            } else if (i.getPocetna() > i2.getPocetna() && i2.getPripadaPocetna()) {
                 presjek.setKrajnja(i2.getKrajnja());
                 presjek.setPripadaKrajnja(false);
             } else {
@@ -119,11 +111,11 @@ public class Interval {
         if(getPocetna()==0 && getKrajnja()==0)
             return "()";
 
-        if(getPripadaPocetna()==true && getPripadaKrajnja()==false)
+        if(getPripadaPocetna() && !getPripadaKrajnja())
             return "[" + pocetna + "," + krajnja + ")";
-        else if(getPripadaPocetna()==true && getPripadaKrajnja()==true)
+        else if(getPripadaPocetna() && getPripadaKrajnja())
             return "[" + pocetna + "," + krajnja + "]";
-        else if (getPripadaPocetna()==false && getPripadaKrajnja()==true)
+        else if (!getPripadaPocetna() && getPripadaKrajnja())
             return "("+pocetna + "," + krajnja+"]";
         else
             return "(" + pocetna + "," + krajnja+")";
@@ -134,9 +126,7 @@ public class Interval {
         if(!(obj instanceof Interval))
             return false;
 
-        if(this.getPocetna()==((Interval) obj).getPocetna() && this.getKrajnja()==((Interval) obj).getKrajnja() && this.getPripadaPocetna()==((Interval) obj).getPripadaPocetna() && this.getPripadaKrajnja()==((Interval) obj).getPripadaKrajnja())
-            return true;
-        else
-            return false;
+        return this.getPocetna()==((Interval) obj).getPocetna() && this.getKrajnja()==((Interval) obj).getKrajnja() && this.getPripadaPocetna()==((Interval) obj).getPripadaPocetna() && this.getPripadaKrajnja()==((Interval) obj).getPripadaKrajnja();
+
     }
 }
