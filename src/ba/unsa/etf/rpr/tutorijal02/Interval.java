@@ -69,10 +69,10 @@ public class Interval {
     }
 
     public Interval intersect(Interval interval) {
-        Interval nula=new Interval();
-        Interval presjekNula=intersect(interval, nula);
+       /* Interval nula=new Interval();
+        Interval presjekNula=intersect(interval, nula); */
 
-        return presjekNula;
+        return intersect(this,interval);
     }
     public static Interval intersect(Interval i, Interval i2) {
         if(i.getKrajnja() < i2.getPocetna()){
